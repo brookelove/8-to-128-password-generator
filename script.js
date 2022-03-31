@@ -38,34 +38,39 @@ function generatePassword(){
         const lowercase = ['a', 'b', 'c', 'd', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var question2 = window.confirm ("Would you like to use uppercase letters in your password?");
          const uppercase = ["A", 'B', "C", 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M','N', 'O',, 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-        //  const option2 = uppercase[Math.floor(Math.random()* uppercase.length)];
-     var question3 = window.confirm ("Would you like special characters in your password?");
+    var question3 = window.confirm ("Would you like special characters in your password?");
          const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '~'];
-        //  const option3 = special[Math.floor(Math.random()* special.length)];
-     var question4 = window.confirm ("Would you like numbers in your password?")
+    var question4 = window.confirm ("Would you like numbers in your password?")
          const numbers = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9'];
-        //  const option4 = numbers[Math.floor(Math.random()* numbers.length)];
+    var result = [];
 //if user inputs choice and chooses 
 
-//if they select uppercase then add every uppercase letter 
-function pass () {
-     if (question1 === true) {
-        lowercase[Math.floor(Math.random ()* lowercase.length)];
-     };
-     if (question2 === true) {
-        uppercase[Math.floor(Math.random()* uppercase.length)];
-     };
-     if (question3 === true) {
-        special[Math.floor(Math.random()* special.length)];
-     }
-     if (question4 === true) {
-        numbers[Math.floor(Math.random()* numbers.length)];
+//if they select lowercase then add every lowercase letter 
+    
+    if (question1) {
+         result.push(...lowercase);
      }
 
-     for (let i = 0; i < char.length; i++) {
-        const database = [].concat.apply[lowercase, uppercase, special, numbers];
-        }
+     if (question2) {
+         result.push(...uppercase);
+     }
 
+     if (question3) {
+         result.push(...special);
+     }
+
+     if (question4) {
+         result.push(...numbers);
+     }
+     
+    var genere = [];
+
+     for (let x = 0; x < char; x++) {
+        genere.push(result[(Math.floor(Math.random() * result.length))]);
+     }
+     
+
+     return genere.join("");
   }
   
   
