@@ -45,32 +45,40 @@ function generatePassword(){
     var result = [];
 //if user inputs choice and chooses 
 
-//if they select lowercase then add every lowercase letter 
+//if they select lowercase then add every lowercase letter to the empty array above 
+//the function of result.push (...lowercase) to be cleaner=
     
     if (question1) {
-         result.push(...lowercase);
+        result = result.concat(lowercase);
      }
 
      if (question2) {
-         result.push(...uppercase);
+         result = result.concat(uppercase);
      }
 
      if (question3) {
-         result.push(...special);
+         result = result.concat(special);
      }
 
      if (question4) {
-         result.push(...numbers);
+         result = result.concat(numbers);
      }
-     
-    var genere = [];
 
+    var genere = [];
+    
+    //recursive function in order to prompt the user to pick something that woiudl start the proccess over 
+    if (!question1 && !question2 && !question3 && !question4) {
+        alert("You have to choose something. Start Over.")
+        return null;
+    }
+
+    //in order to make the random else 
      for (let x = 0; x < char; x++) {
         genere.push(result[(Math.floor(Math.random() * result.length))]);
      }
      
 
-     return genere.join("");
+     return genere.join("").toString();
   }
   
   
