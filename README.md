@@ -1,7 +1,7 @@
 # 8-to-128-password-generator
 
 ## Description
-This program is if you need a password, can not make up your own. It will set up parameters that you can pick forom and generate a password ased on it.  
+This program is if you need a password, can not make up your own. It will set up parameters that you can pick forom and generate a password based on it.  
 ##Tech Used
   - HTML
   - CSS
